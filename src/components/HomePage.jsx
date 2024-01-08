@@ -2,7 +2,7 @@
 
 function HomePage({ books }) {
   return (
-    <div className="container mx-auto p-4">
+    <div className="container mx-auto  p-4">
       <div className="text-center mb-4">
         <h1 className="text-2xl font-bold">Book List</h1>
       </div>
@@ -10,7 +10,7 @@ function HomePage({ books }) {
         {books.map((book) => (
           <div
             key={book.id}
-            className="bg-white rounded-lg shadow-md p-4 flex justify-center items-center flex-col text-center"
+            className="bg-yellow-100 rounded-lg  shadow-md p-4 flex justify-center items-center flex-col text-center"
           >
             <img src={book.imageLinks?.thumbnail || ""} />
             <h2 className="text-xl font-semibold mb-2">{book.title}</h2>
@@ -29,6 +29,10 @@ function HomePage({ books }) {
               </p>
               <p>Free</p>
             </div>
+            <button className="bg-orange-500  p-2 mt-2 rounded-md text-white">
+              {" "}
+              <a href={book.previewLink}> See More</a>
+            </button>
           </div>
         ))}
       </ul>
