@@ -38,7 +38,11 @@ function App() {
   }, [searchQuery, books]);
 
   if (isLoading) {
-    return <div>Loading...</div>;
+    return (
+      <div className="w-screen h-screen flex justify-center items-center text-white pt-20 bg-orange-400">
+        <h1 className="text-3xl font-bold">Loading...</h1>
+      </div>
+    );
   }
 
   if (error) {
